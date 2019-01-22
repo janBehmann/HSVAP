@@ -5,7 +5,7 @@ HSVap supports the use of advanced methods of Machine Learning for analysis of h
   * exploration of data and generation of training data
   * accessing Machine Learning algorithms via an intuitive interface
 
-HSVap is an Open Source project which is implemented in Java. A beta release will be published in January 2015.
+HSVap is an Open Source project which is implemented in Java. 
 
 ## Key Features
   ### Visual Data Exploration
