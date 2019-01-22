@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project HSVap">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="MakeJSON.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="data.fileformats.MakeJSON"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="/home/pwelke/workspace/HSVap/bin"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/jamtio.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/Jama-1.0.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/jdom.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/jep-2.4.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/vecmath-1.3.1.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/jblas.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/jhdf.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/jhdf4obj.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/jhdf5.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/jhdf5obj.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/jhdfobj.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/fits.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/netcdf.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/commons-math3-3.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/json-java-2013-07-24.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/shogun.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/weka.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/jmathplot.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="../lib/libsvm.jar"/>
+        </jar>
+    </target>
+</project>

@@ -1,0 +1,57 @@
+== JaMF ==
+
+You can find Python Matrix Factorization (pymf) functionality in the upper
+half of the "Unsupervised Learning" tab.
+This part of the software allows you to use the various matrix factorization
+methods provided by pymf (pymf.googlecode.com).
+
+After selecting a dataset (called view) in the Data-Management tab you may
+switch to the Unsupervised Learning tab and select one of the various
+factorization methods (e.g. SIVM for SImplex Volume Maximization) from the
+dropdown list in the upper left.
+The factorization is done only for the standard features of the view, i.e.
+X and Y coordinate and LABEL are not considered. For example, if your view has
+100 columns and 2000 rows, and X, Y, and LABEL, then the factorization will
+work on a 2000 x 97 matrix containing all rows but X, Y, and LABEL.
+
+Different factorization methods expect different parameters. The necessary
+parameters for each method can be specified after selecting it from the
+dropdown list. E.g. SIVM expects two parameters, num_bases and dist_measure.
+
+Most factorization methods expect the parameter num_bases. It specifies the
+shape of the resulting factors. If you set num_bases to 10, the resulting
+output of SIVM on the above example would be two matrices. One with shape
+2000 x 10, the other with shape 10 x 97.
+
+After setting all parameters, you may press the rightmost button ("Factorize").
+Now is time to get a coffee (or do something in some other tab). The button
+will be disabled until the factorization process has terminated (either with
+an error or successful).
+
+If there was no error, the resulting matrices / views are added to the list in
+the Data-Management tab. They will be named after the view that was initially
+selected and will have a suffix (_H, _W, _S, _U, or _V).
+
+
+== Configuration ==
+
+This module uses python and several packages for python that are not in a
+standard distribution. More exactly, this library was developed for PyMF 0.1.7
+for Python 2.7. The python packages
+* scipy
+* numpy
+* h5pyy
+* cvxopt
+* pymf
+need to be installed. If your systems python distribution does not have these
+packages and you are not able to install them, it is possible to use a custom
+python distribution. A zipped version of such a distribution for 64-bit linux
+should have been distributed together with this software and can be found in
+the subfolder python_dist. You may unzip it to any location of your choosing
+and then need to connect HSVap to this python distribution (per default, it
+uses the system distribution). You can do this by pressing the
+"Select environment" button. This opens a dialog where you can choose either
+the system distribution or the path to the python executable that should be
+used instead (which can be found in the bin/ subfolder of the unzipped
+distribution). Your choice will be remembered from now on, you do not have to
+select a distribution each time you start the program.
